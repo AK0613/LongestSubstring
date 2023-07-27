@@ -63,12 +63,12 @@ namespace LongestSubstring
 
             // Dictionary holds the value of each letter in the substring as key and its index as value
             var dict = new Dictionary<char, int>();
-            //If the string has only one or less characters just return the current length
+            // If the string has only one or less characters just return the current length
             if (length <= 1)
                 return length;
             else
             {   
-                //While the right pointer is less than the length of the string (-1 not needed)
+                // While the right pointer is less than the length of the string (-1 not needed)
                 while(right < length)
                 {
                     // If the dictionary does not contain the letter at index p or if the letter's index is less than the left pointer (outside of the current substring)
@@ -87,7 +87,7 @@ namespace LongestSubstring
 
                     // The max length of the current string is the difference between right and left pointers
                     curr_max = right - left;
-                    //Total is the Max between curr_max and the running total
+                    // Total is the Max between curr_max and the running total
                     total = Math.Max(total, curr_max);
                 }
             }
